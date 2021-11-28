@@ -1,0 +1,18 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "useWorkspaces": true,
+  "version": "1.0.0",
+  "ignoreChanges": [
+    "**/*.md",
+    "**/*.test.ts",
+    "**/*.e2e.ts",
+    "**/demos/**",
+    "**/fixtures/**",
+    "**/dist/**",
+    "**/lib/**",
+    "**/es/**",
+    "**/test/**"
+  ]
+}

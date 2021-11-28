@@ -1,0 +1,17 @@
+{
+  "name": "examples",
+  "private": true,
+  "version": "1.0.0",
+  "author": "BoBo<boboooooo159@gmail.com>",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --color --fix",
+    "dev": "webpack-dev-server --config ./webpack.config.js"
+  },
+  "dependencies": {
+    "@namespace/ui": "^1.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
