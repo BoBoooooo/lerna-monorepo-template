@@ -4,6 +4,21 @@
   ],
   "useWorkspaces": true,
   "version": "1.0.0",
+   "command": {
+    "version": {
+      "conventionalCommits": true
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "ignoreChanges": [
+        "*.md",
+        "examples/**",
+        "test/**",
+        "node_modules"
+      ],
+      "message": "build(release): 😊 publish %s"
+    }
+  },
   "ignoreChanges": [
     "**/*.md",
     "**/*.test.ts",
