@@ -1,6 +1,6 @@
 import React from 'react';
 import UI from '@namespace/ui';
-import '@namespace/ui/lib/index.css';
+// import '@namespace/ui/lib/index.css';
 
 const Demo = () => {
     return (

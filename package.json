@@ -14,7 +14,7 @@
     "watch": "lerna run watch --stream --parallel",
     "build": "lerna run build",
     "lint": "lerna run lint --parallel",
-    "test": "NODE_OPTIONS=--unhandled-rejections=warn  jest",
+    "test": "NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
     "publish": "lerna run build && lerna publish",
     "publish:beta": "lerna run build && lerna publish --canary --pre-dist-tag=beta --preid=beta --yes",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"

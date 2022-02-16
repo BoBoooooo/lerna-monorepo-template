@@ -24,5 +24,5 @@ npm start
 ## Deploy
 
 ``` bash
-npm run deploy
+npm run publish
 ```
