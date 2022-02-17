@@ -9,7 +9,7 @@
   "author": "BoBo<boboooooo159@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn workspace examples run dev",
+    "start": "yarn workspace docs run storybook",
     "bootstrap": "lerna bootstrap",
     "watch": "lerna run watch --stream --parallel",
     "build": "lerna run build",
