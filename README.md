@@ -3,10 +3,6 @@
 ## CI Tech Stack
 Yarn + Typescript + Lerna + Jest + Conventional-changelog
 
-## Support
-
-React + Less + TypeScript
-
 ## Environment
 node v15+
 
@@ -14,13 +10,10 @@ node v15+
 
 ``` bash
 yarn or npm i
-npm run bootstrap
+npm run dev
 npm run watch
 ```
 
-``` bash
-npm start
-```
 ## Deploy
 
 ``` bash

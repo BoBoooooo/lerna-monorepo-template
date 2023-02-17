@@ -1,6 +1,5 @@
 import React from 'react';
 import Component from '@namespace/components';
-import './styles/index.less';
 
 export default ()=>{
     return (
