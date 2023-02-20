@@ -9,6 +9,9 @@
         "declaration": true,
         "allowJs": false,
         "downlevelIteration": true,
+        "paths": {
+            "@namespace/*": ["packages/*/src"]
+        },
         "lib": ["dom", "es2015"]
     }
 }
