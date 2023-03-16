@@ -11,12 +11,12 @@
   "scripts": {
     "start": "yarn workspace docs run storybook",
     "bootstrap": "lerna bootstrap",
-    "watch": "lerna run watch --stream --parallel",
+    "watch": "lerna run build:watch --stream --parallel",
     "build": "lerna run build",
-    "lint": "lerna run lint --parallel",
+    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --color --fix",
     "test": "NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
-    "publish": "lerna run build && lerna publish",
-    "publish:beta": "lerna run build && lerna publish --canary --pre-dist-tag=beta --preid=beta --yes",
+    "publish": "lerna publish",
+    "publish:beta": "lerna publish --canary --pre-dist-tag=beta --preid=beta --yes",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "devDependencies": {
@@ -30,6 +30,7 @@
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
+    "@types/node": "^18.15.3",
     "@types/enzyme": "^3.10.10",
     "@types/jest": "^27.0.0",
     "@types/react": "^17.0.3",
@@ -49,6 +50,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
     "jest": "^27.3.1",
     "lerna": "^4.0.0",
     "lint-staged": "^10.4.2",
@@ -59,5 +61,17 @@
     "react-test-renderer": "^17.0.2",
     "ts-jest": "^27.0.7",
     "typescript": "^4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "experimentalDecorators": true,
+        "useDefineForClassFields": true,
         "sourceMap": true,
         "esModuleInterop": true,
         "noImplicitAny": true,
@@ -9,9 +11,10 @@
         "declaration": true,
         "allowJs": false,
         "downlevelIteration": true,
+        "lib": ["dom", "es2015"],
         "paths": {
             "@namespace/*": ["packages/*/src"]
-        },
-        "lib": ["dom", "es2015"]
+          },
+        "baseUrl": "."
     }
 }

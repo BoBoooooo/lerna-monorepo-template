@@ -6,13 +6,16 @@
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "scripts": {
-        "precommit": "lint-staged",
         "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --color --fix",
-        "build": "tsc",
-        "watch": "tsc --watch"
+        "build": "rimraf -rf lib esm && yarn build:esm && yarn build:cjs",
+        "build:cjs": "tsc --project tsconfig.prod.json",
+        "build:esm": "tsc --project tsconfig.prod.json --module es2015 --outDir esm",
+        "build:watch": "tsc --watch",
+        "prepublishOnly": "yarn build"
     },
     "files": [
-        "lib"
+        "lib",
+        "esm"
     ],
     "dependencies": {
         "@namespace/components": "^0.1.0"
