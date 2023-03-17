@@ -20,20 +20,6 @@
     "dependencies": {
         "@namespace/components": "^0.1.0"
     },
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^4.6.0",
-        "@typescript-eslint/parser": "^4.5.0",
-        "eslint": "^7.12.1",
-        "eslint-config-airbnb": "^18.2.0",
-        "eslint-config-airbnb-base": "^14.2.0",
-        "eslint-config-prettier": "^6.14.0",
-        "eslint-plugin-import": "^2.22.1",
-        "eslint-plugin-prettier": "^3.1.2",
-        "eslint-plugin-react": "^7.21.5",
-        "eslint-plugin-react-hooks": "^4.2.0",
-        "lint-staged": "^10.4.2",
-        "prettier": "^1.19.1"
-    },
     "peerDependencies": {
         "@types/hoist-non-react-statics": "^3.3.1",
         "@types/react": "^17.0.3",

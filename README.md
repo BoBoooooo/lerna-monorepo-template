@@ -1,14 +1,16 @@
 # Lerna-Template-Project
 
 ## CI Tech Stack
+
 Yarn + Typescript + Lerna + Jest + Conventional-changelog
 
 ## Environment
+
 node v15+
 
 ## Start
 
-``` bash
+```bash
 yarn or npm i
 npm run dev
 npm run watch
@@ -16,6 +18,6 @@ npm run watch
 
 ## Deploy
 
-``` bash
+```bash
 npm run publish
 ```

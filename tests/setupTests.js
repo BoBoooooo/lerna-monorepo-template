@@ -2,25 +2,25 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import "@testing-library/jest-dom";
-import Enzyme from "enzyme";
-import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+import '@testing-library/jest-dom';
+import Enzyme from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 /* eslint-disable global-require */
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   global.window.resizeTo = (width, height) => {
     global.window.innerWidth = width || global.window.innerWidth;
     global.window.innerHeight = height || global.window.innerHeight;
-    global.window.dispatchEvent(new Event("resize"));
+    global.window.dispatchEvent(new Event('resize'));
   };
   global.window.scrollTo = () => {};
   // ref: https://stackoverflow.com/questions/39830580/jest-test-fails-typeerror-window-matchmedia-is-not-a-function
   if (!window.matchMedia) {
-    Object.defineProperty(global.window, "matchMedia", {
+    Object.defineProperty(global.window, 'matchMedia', {
       value: jest.fn((query) => ({
-        matches: query.includes("max-width"),
+        matches: query.includes('max-width'),
         addListener: jest.fn(),
         removeListener: jest.fn(),
       })),
