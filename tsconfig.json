@@ -13,7 +13,8 @@
     "downlevelIteration": true,
     "lib": ["dom", "es2015"],
     "paths": {
-      "@namespace/*": ["packages/*/src"]
+      "@namespace/ui": ["packages/ui/src"],
+      "@namespace/components": ["packages/components/src"]
     },
     "baseUrl": "."
   }
