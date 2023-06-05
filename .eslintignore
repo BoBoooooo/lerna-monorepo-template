@@ -2,3 +2,11 @@
 /**/esm/*
 /**/*.d.ts
 tests/*
+/**/lib/*
+/**/esm/*
+/**/*.d.ts
+tests/*
+storybook-static
+node_modules
+package.json
+package-lock.json

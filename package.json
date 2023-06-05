@@ -13,6 +13,7 @@
     "bootstrap": "lerna bootstrap",
     "watch": "lerna run build:watch --stream --parallel",
     "build": "lerna run build",
+    "build:doc": "yarn workspace docs run build-storybook",
     "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --color --fix",
     "test": "NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
     "version": "lerna version --no-private",

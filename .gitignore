@@ -220,3 +220,4 @@ lerna-debug.log
 
 lib/
 esm/
+storybook-static
