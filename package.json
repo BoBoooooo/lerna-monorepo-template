@@ -18,7 +18,7 @@
     "test": "NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
     "version": "lerna version --no-private",
     "publish": "yarn build && yarn test && yarn version && lerna publish from-git",
-    "publish:beta": "yarn build && yarn run version && lerna publish --canary --pre-dist-tag=beta --preid=beta --yes",
+    "publish:beta": "yarn build && lerna version prepatch --no-private --preid=beta && lerna publish --pre-dist-tag=beta --preid=beta",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "devDependencies": {
