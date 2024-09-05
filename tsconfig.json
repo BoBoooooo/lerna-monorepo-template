@@ -1,21 +1,14 @@
 {
+  "extends": "./tsconfig.prod.json",
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "noEmit": true,
     "sourceMap": true,
-    "esModuleInterop": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es5",
-    "jsx": "react",
-    "declaration": true,
-    "allowJs": false,
-    "downlevelIteration": true,
-    "lib": ["dom", "es2015"],
+    "resolveJsonModule": true,
+    "strictFunctionTypes": true,
     "paths": {
       "@namespace/ui": ["packages/ui/src"],
       "@namespace/components": ["packages/components/src"]
-    },
-    "baseUrl": "."
+    }
   }
 }

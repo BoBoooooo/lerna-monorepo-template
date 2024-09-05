@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
+    "target": "ES2015",
+    "module": "ES2015",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
     "declaration": true,
@@ -11,12 +11,11 @@
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0",
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": false,
     "jsx": "react",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "useDefineForClassFields": true
+    "esModuleInterop": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

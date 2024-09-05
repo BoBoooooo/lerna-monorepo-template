@@ -10,7 +10,7 @@
   "dependencies": {
     "@namespace/ui": "^0.1.0"
   },
- "devDependencies": {
+  "devDependencies": {
     "@chromatic-com/storybook": "^1",
     "@storybook/addon-actions": "^8.2.9",
     "@storybook/addon-essentials": "^8.2.9",
