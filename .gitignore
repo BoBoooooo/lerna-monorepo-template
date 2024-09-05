@@ -5,6 +5,7 @@ esm/
 /docs
 /.idea/usage.statistics.xml
 package-lock.json
+storybook-static/
 
 # Created by https://www.gitignore.io/api/vim,node,linux,macos,windows,webstorm,visualstudiocode
 
