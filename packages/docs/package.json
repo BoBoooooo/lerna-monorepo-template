@@ -4,19 +4,31 @@
   "version": "0.1.0",
   "author": "BoBo <boboooooo159@gmail.com>",
   "scripts": {
-    "storybook": "start-storybook -p 8008 -c .storybook",
-    "build-storybook": "build-storybook",
-    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --color --fix"
+    "storybook": "storybook dev -p 8888",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@namespace/ui": "^0.1.0"
   },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.4.14",
-    "@storybook/addon-essentials": "^6.4.14",
-    "@storybook/addon-links": "^6.4.14",
-    "@storybook/react": "^6.4.14",
-    "babel-plugin-styled-components": "^2.0.2",
+ "devDependencies": {
+    "@chromatic-com/storybook": "^1",
+    "@storybook/addon-actions": "^8.2.9",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/addon-viewport": "^8.2.9",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@storybook/addon-styling-webpack": "^1.0.0",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-webpack5": "^8.2.9",
+    "@types/mockjs": "^1.0.4",
+    "babel-plugin-styled-components": "^2.1.4",
+    "http-proxy-middleware": "^2.0.6",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mockjs": "^1.1.0",
+    "storybook": "^8.2.9",
+    "style-loader": "^2.0.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2"
   }
 }

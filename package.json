@@ -4,22 +4,25 @@
   "workspaces": [
     "packages/*"
   ],
-  "version": "1.0.0",
-  "main": "index.js",
   "author": "BoBo<boboooooo159@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn workspace docs run storybook",
+    "start": "yarn dev",
+    "dev": "yarn workspace docs storybook",
     "bootstrap": "lerna bootstrap",
-    "watch": "lerna run build:watch --stream --parallel",
+    "watch": "lerna run watch --stream --parallel",
     "build": "lerna run build",
-    "build:doc": "yarn workspace docs run build-storybook",
-    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --color --fix",
-    "test": "NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
-    "version": "lerna version --no-private",
-    "publish": "yarn build && yarn test && yarn version && lerna publish from-git",
-    "publish:beta": "yarn build && lerna version prepatch --no-private --preid=beta && lerna publish --pre-dist-tag=beta --preid=beta",
-    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "build:storybook": "yarn workspace docs build-storybook",
+    "typedoc": "typedoc",
+    "docs": "yarn typedoc && open docs/index.html",
+    "eslint": "eslint packages/**/src/*.{ts,tsx} --cache",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "release": "yarn eslint && yarn build && yarn ver && lerna publish from-git",
+    "release:npm": "yarn eslint && yarn build && yarn ver && lerna publish from-package",
+    "release:beta": "yarn eslint && yarn build && yarn ver && lerna publish from-package --dist-tag beta",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
@@ -27,51 +30,41 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
-    "@commitlint/cli": "^17.4.4",
-    "@commitlint/config-conventional": "^17.4.4",
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/react-hooks": "^7.0.2",
-    "@types/node": "^18.15.3",
-    "@types/enzyme": "^3.10.10",
-    "@types/jest": "^27.0.0",
+    "@types/hoist-non-react-statics": "^3.3.1",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
-    "babel-jest": "^27.3.1",
-    "conventional-changelog-cli": "^2.1.1",
-    "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.6.0",
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^4.1.2",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.3.0",
+    "@types/styled-components": "^5.1.20",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "eslint": "^8.55.0",
+    "eslint-config-ali": "^14.0.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "conventional-changelog-cli": "^4.1.0",
     "jest": "^27.3.1",
-    "lerna": "^4.0.0",
-    "lint-staged": "^10.4.2",
-    "mini-css-extract-plugin": "^0.9.0",
-    "prettier": "^2.8.4",
+    "lerna": "^8.1.2",
+    "husky": "^8.0.3",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-test-renderer": "^17.0.2",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.2.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsc --noEmit && npm run lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "rimraf": "^3.0.2",
+    "styled-components": "^5.3.3",
+    "typescript": "^4.2.4",
+    "lint-staged": "^15.2.2",
+    "typedoc": "^0.26.6"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

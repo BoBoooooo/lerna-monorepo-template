@@ -1,0 +1,17 @@
+{
+  "extends": ["eslint-config-ali/typescript/react", "prettier", "plugin:prettier/recommended"],
+  "ignorePatterns": ["**/dist/**/*", "**/lib/**/*", "**/node_modules/**/*", "scripts/**/*"],
+  "plugins": ["import", "react", "react-hooks", "prettier"],
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+     "@typescript-eslint/member-ordering": "off",
+     "react/no-unused-prop-types": "off",
+    "import/no-cycle": "off",
+    "no-nested-ternary": "off",
+    "no-useless-return": "off",
+    "no-param-reassign": "off",
+    "prefer-destructuring": "off"
+  }
+}

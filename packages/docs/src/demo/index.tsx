@@ -5,7 +5,7 @@ import UI from '@namespace/ui';
 const Demo = () => {
   return (
     <div className="examples-wrapper">
-      npm run dev ( examples
+      npm run dev
       <UI />
     </div>
   );
