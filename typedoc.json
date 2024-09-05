@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "MyComponent",
+  "entryPoints": ["packages/components", "packages/ui"],
+  "entryPointStrategy": "packages",
+  "exclude": ["packages/**/__tests__/**/*"],
+  "out": "docs",
+  "logLevel": "Verbose"
+}

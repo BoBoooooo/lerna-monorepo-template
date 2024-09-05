@@ -1,7 +1,8 @@
 # custom
 dist/
 lib/
-es/
+esm/
+/docs
 /.idea/usage.statistics.xml
 package-lock.json
 

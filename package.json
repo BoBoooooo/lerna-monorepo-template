@@ -24,6 +24,9 @@
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prepare": "husky install"
   },
+  "resolutions": {
+    "@types/react": "^17.0.3"
+  },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.9.0",
@@ -31,9 +34,9 @@
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
     "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/styled-components": "^5.1.29",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
-    "@types/styled-components": "^5.1.20",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "eslint": "^8.55.0",
